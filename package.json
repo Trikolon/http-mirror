@@ -1,0 +1,24 @@
+{
+  "name": "mirror",
+  "version": "1.0.0",
+  "description": "Webserver that mirrors HTTP request headers back to client.",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js --exec babel-node",
+    "start": "babel src -d dist -s && node dist/index.js"
+  },
+  "author": "Paul Zühlcke <mail@pbz.im>",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "nodemon": "^1.17.3"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chalk": "^2.3.2",
+    "express": "^4.16.3",
+    "log4js": "^2.5.3"
+  }
+}

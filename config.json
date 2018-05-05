@@ -1,0 +1,11 @@
+{
+    "logger": {
+      "default": "debug",
+      "HTTP": "debug"
+    },
+    "http": {
+      "hostname": "localhost",
+      "port": 8000
+    }
+  }
+  
