@@ -1,4 +1,3 @@
-import chalk from 'chalk';
 import log4js from 'log4js';
 import express from 'express';
 

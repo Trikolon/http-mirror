@@ -1,5 +1,5 @@
 {
-  "name": "mirror",
+  "name": "http-mirror",
   "version": "1.0.0",
   "description": "Webserver that mirrors HTTP request headers back to client.",
   "main": "src/index.js",
