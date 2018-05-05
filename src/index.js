@@ -11,11 +11,10 @@ const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 log4js.configure({
   appenders: {
     out: { type: 'stdout' },
-    file: { type: 'file', filename: 'server.log' },
   },
   categories: {
-    default: { appenders: ['out', 'file'], level: config.logger.default },
-    HTTP: { appenders: ['out', 'file'], level: config.logger.HTTP },
+    default: { appenders: ['out'], level: config.logger.default },
+    HTTP: { appenders: ['out'], level: config.logger.HTTP },
   },
 });
 const logger = log4js.getLogger();
