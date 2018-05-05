@@ -31,10 +31,21 @@ app.use((req, res, next) => {
 });
 
 // Set up handler for request header reply
-app.use((req, res, next) => {
+app.use((req, res) => {
   logger.debug('Mirroring request', req.headers);
-  res.json(req.headers);
-  next();
+
+  const reply = {
+    httpMethod: req.method,
+    headers: req.headers,
+  };
+
+  try {
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).send(JSON.stringify(reply, null, 3));
+  } catch (error) {
+    logger.error('Error while converting reply object to string', error, reply);
+    res.status(500).send();
+  }
 });
 
 app.listen(config.http.port, config.http.host);
