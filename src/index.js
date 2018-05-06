@@ -55,6 +55,9 @@ app.use((req, res) => {
   }
 });
 
-app.listen(config.http.port, config.http.host);
+const host = config.http.host || 'localhost';
+const port = config.http.port || 8000;
 
-logger.info(`Started Mirror at http://${config.http.hostname}:${config.http.port}`);
+app.listen(port, host, () => {
+  logger.info(`Started Mirror at http://${host}:${port}`);
+});
