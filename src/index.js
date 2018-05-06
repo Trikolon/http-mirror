@@ -34,7 +34,14 @@ app.use((req, res, next) => {
 app.use((req, res) => {
   logger.debug('Mirroring request', req.headers);
 
+  // Get IP of client
+  // Prepended: List of ip headers which should overwrite remoteAddress field
+  // If there is a proxy between the client and this server it (probably) inserts one of these
+  // If none of these special ip headers are present, use connection address
+  const ip = req.headers['cf-connecting-ip'] || req.headers['true-client-ip'] || req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+
   const reply = {
+    ip,
     httpMethod: req.method,
     headers: req.headers,
   };
