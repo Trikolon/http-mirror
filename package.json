@@ -9,17 +9,17 @@
   },
   "author": "Paul Zühlcke <mail@pbz.im>",
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.11.0",
-    "nodemon": "^1.17.3"
+    "eslint": "^5.0.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "nodemon": "^1.17.5"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "chalk": "^2.3.2",
-    "cross-env": "^5.1.4",
+    "cross-env": "^5.2.0",
     "express": "^4.16.3",
-    "log4js": "^2.5.3"
+    "log4js": "^2.10.0"
   }
 }
