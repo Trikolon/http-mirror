@@ -2,9 +2,10 @@ import log4js from 'log4js';
 import express from 'express';
 
 const fs = require('fs');
+const path = require('path');
 
 // Read config file to variable
-const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
+const config = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../config.json'), 'utf8'));
 
 
 // Setup logger
