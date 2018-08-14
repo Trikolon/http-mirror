@@ -10,7 +10,7 @@
   "author": "Paul Zühlcke <mail@pbz.im>",
   "devDependencies": {
     "eslint": "^5.1.0",
-    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.13.0",
     "nodemon": "^1.18.3"
   },
